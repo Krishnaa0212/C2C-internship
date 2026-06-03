@@ -1,0 +1,31 @@
+class Bank {
+    constructor(amount) {
+        this.amount = amount;
+    }
+
+    getBalance() {
+        console.log("Balance is:", this.amount);
+    }
+
+    deposit(amount) {
+        this.amount = this.amount + amount;
+    }
+
+    withdraw(amount) {
+        this.amount = this.amount - amount;
+    }
+}
+
+var myobj = new Bank(1000);
+
+console.log(myobj.amount);   // 1000
+myobj.getBalance();          // 1000
+
+myobj.deposit(5000);
+myobj.getBalance();          // 6000
+
+myobj.withdraw(10000);
+myobj.getBalance();          // -4000
+
+var myobj2 = new Bank(1000);
+myobj2.getBalance();         // 1000
