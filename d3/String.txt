@@ -1,0 +1,101 @@
+String :
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a;
+    int count = 0;
+    string str = "Indus University";
+    
+    for(int i = 0;i<str.length();i++){
+        cout << str[i];
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
+            count+=1;
+        }
+    }
+
+    cout<<count<<endl;
+    //cin>>a;
+    //cout << a <<endl;
+    //getline(cin,str);
+    //cout<<str<<endl;
+    return 0;
+}
+
+
+
+Append:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    string s1 = "Indus";
+    string s2 = "University";
+    s1.append(s2);
+    cout<<"String is :"<<endl;
+    return 0;
+}
+
+
+
+File Handling:
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main() {
+    ifstream file("test.txt");
+    string str;
+    while(getline(file,str)) {
+        cout<<str;
+    }
+    file.close();
+    cout<<endl<<"file inserted successfully";
+    return o
+    }
+
+Name college branch :
+
+
+    #include<iostream>
+    #include<fstream>
+    using namespace std;
+    
+    int main() {
+    char name[30], college[50], branch[20];
+    int sem;
+    float cgpa;
+
+    ofstream fout("student.txt");
+
+    cout << "Enter Name: ";
+    cin >> name;
+
+    cout << "Enter College: ";
+    cin >> college;
+
+    cout << "Enter Branch: ";
+    cin >> branch;
+
+    cout << "Enter Semester: ";
+    cin >> sem;
+
+    cout << "Enter CGPA: ";
+    cin >> cgpa;
+
+    fout << "Name     : " << name << endl;
+    fout << "College  : " << college << endl;
+    fout << "Branch   : " << branch << endl;
+    fout << "Semester : " << sem << endl;
+    fout << "CGPA     : " << cgpa << endl;
+
+    fout.close();
+
+    cout << "\nData Stored Successfully in student.txt";
+
+    return 0;
+}
