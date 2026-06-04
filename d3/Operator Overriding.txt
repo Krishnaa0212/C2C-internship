@@ -1,0 +1,25 @@
+Function Overloading:
+
+#include <iostream>
+using namespace std;
+
+class parent{
+       public:
+       void display(){
+        cout<<"hello from parent";
+    }
+};
+class child : public parent{
+    public:
+    void display(){
+        cout<<"hello from child";
+    }
+};
+int main(){
+    parent *p;
+    child c;
+    p = &c;
+    p->display();
+    //child obj;
+    return 0;
+}

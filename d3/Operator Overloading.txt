@@ -1,13 +1,13 @@
 Operator Overloading :
 
-1)
+1)For Addition:
 #include <iostream>
 using namespace std;
 
 class abc {
 public:
     int num;
-    
+ 
     // Fixed operator+ to return an abc object
     abc operator+ (abc obj) {
         abc temp;
@@ -18,26 +18,26 @@ public:
 
 int main() {
     abc s1, s2, s3;
-    
+ 
     s1.num = 10;
     s2.num = 20;
-    
+ 
     // Fixed: s1 + s2 returns an 'abc' object, which matches 's3'
     s3 = s1 + s2;
-    
+ 
     cout << "number is: " << s3.num;
-    
+ 
     return 0;
 }
 
-2)
+2)For multiplication:
 #include <iostream>
 using namespace std;
 
 class abc {
 public:
     int num;
-    
+ 
     // Fixed operator+ to return an abc object
     abc operator* (abc obj) {
         abc temp;
@@ -48,14 +48,14 @@ public:
 
 int main() {
     abc s1, s2, s3;
-    
+ 
     s1.num = 10;
     s2.num = 20;
-    
+ 
     // Fixed: s1 + s2 returns an 'abc' object, which matches 's3'
     s3 = s1 * s2;
-    
+ 
     cout << "number is: " << s3.num;
-    
+ 
     return 0;
 }
