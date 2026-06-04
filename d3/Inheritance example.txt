@@ -1,0 +1,97 @@
+Inheritance example :
+
+1)
+#include<iostream>
+Using namespace std;
+          class abc{
+                public:
+                int parentNum;
+          };
+
+          class bcd: public : abc{
+                public:
+                int childNum;
+    
+          int main(){ 
+               bcd obj;
+               obj.parentNum = 10;
+               obj.childNum = 20;
+               cout<<"parent number is :"<<obj.parentNum<<endl;
+               cout<<"child number is :"<<obj.childNum<<endl;
+               return 0;
+         }
+
+2)
+#include<iostream>
+using namespace std;
+    class parent{
+        public:
+        int parentNum;
+    };
+    class child : public parent{
+        public:
+        int childNum;
+    };
+    class grandChild : public child{
+        public:
+            int grandChildNum;
+              void display(){
+                 grandChildNum = 30;
+                 cout<<"number is : "<<grandChildNum<<endl;
+        }
+    };
+
+    int main(){
+        grandChild obj;
+        obj.parentNum = 20;
+        return 0;
+    }
+
+3)
+#include <iostream>
+
+int main() {
+    double balance = 1000.0;
+    int choice;
+    double amount;
+
+    while (true) {
+        std::cout << "\n1. Check Balance\n2. Deposit\n3.     Withdraw\n4. Exit\nEnter choice: ";
+        std::cin >> choice;
+
+        if (choice == 1) {
+            std::cout << "Current balance: $" << balance << "\n";
+        } 
+        else if (choice == 2) {
+            std::cout << "Enter deposit amount: $";
+            std::cin >> amount;
+            if (amount > 0) {
+                balance += amount;
+                std::cout << "Deposit successful.\n";
+            } else {
+                std::cout << "Invalid amount.\n";
+            }
+        } 
+        else if (choice == 3) {
+            std::cout << "Enter withdrawal amount: $";
+            std::cin >> amount;
+            if (amount > 0 && amount <= balance) {
+                balance -= amount;
+                std::cout << "Withdrawal successful.\n";
+            } else {
+                std::cout << "Invalid amount or insufficient funds.\n";
+            }
+        } 
+        else if (choice == 4) {
+            std::cout << "Thank you.\n";
+            break;
+        } 
+        else {
+            std::cout << "Invalid choice.\n";
+        }
+    }
+
+    return 0;
+}
+
+

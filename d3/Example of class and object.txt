@@ -1,0 +1,20 @@
+Example of class and object :
+
+#include<iostream>
+Using namespace std;
+
+      class abc {
+                public:
+                int num;
+      };
+      int main() {
+             abc obj1;
+             abc obj2;
+             obj1.num = 10;
+             cout<<"number is"<<obj1.num<<endl;
+             obj2.num = 20;
+             cout<<"number from obj2 is"<<obj2.num<<endl;
+             cout<<"Hello World";
+             return 0;
+      }
+
