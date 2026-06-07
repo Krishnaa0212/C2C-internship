@@ -1,0 +1,13 @@
+Basic html Code
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+         <tittle>welcome to indus</tittle>
+
+</head>
+
+</html>
