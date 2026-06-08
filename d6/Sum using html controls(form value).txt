@@ -1,0 +1,23 @@
+Sum using html controls(form value) :
+
+
+<html>
+        <script>
+            function doSum(){
+                var a = myfrm.txt1.value
+                var b = myfrm.txt2.value
+                var c = parseInt(a) + parseInt(b)
+                //document.write("Sum is "+c)
+                myfrm.ans.value = "Sum is "+ c
+            }  
+        </script>
+        <body>
+            <form id = "myfrm">
+                No1 : <input type ="text" name="txt1" /> <br />
+                No2 : <input type ="text" name="txt2" /> <br />
+                <Input type="button" onclick="doSum()" value="Sum" />
+                <Input type="text" name="ans" readonly disabled/>
+            </form>
+        </body>
+
+</html>

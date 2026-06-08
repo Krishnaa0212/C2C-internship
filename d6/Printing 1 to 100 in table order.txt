@@ -1,0 +1,21 @@
+Printing 1 to 100 in table order :
+
+
+<html>
+    <head>
+        <script>
+            document.write("<table border='1'>")
+                for(var i = 0; i < 100; i++) {
+                    document.write("<tr>")
+                if (i % 2 == 0) {
+                    document.write("<td bgcolor='red'>" + i + "</td>")
+                } else{
+                    document.write("<td bgcolor='yellow'>"+i+"</td>")
+                }
+                document.write("</tr>")
+
+                }
+                document.write("</table>")
+        </script>
+    </head>
+</html>

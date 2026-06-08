@@ -1,0 +1,38 @@
+GST Calculator :
+
+
+<html>
+    <head>
+        <tittle>GST Calculator</tittle>
+        <script>
+            function calculateGST(){
+                var amount = parseFloat(document.getElementById("amt").value);
+                var gstRate = parseFloat(document.getElementById("gst").value);
+                var gstAmount = (amount * gstRate) / 100;
+                var cgst = gstAmount / 2;
+                var sgst = gstAmount / 2;
+                var total = amount + gstAmount;
+                document.getElementById("result").innerHTML = 
+                "Amount : ₹ " + amount + "<br>" +
+                "CGST : ₹ " + cgst.toFixed(2) + "<br>" +
+                "SGST : ₹ " + sgst.toFixed(2) + "<br>" + 
+                "GST (" + gstRate + "%) : " + gstAmount.toFixed(2) +"<br>" +
+                "Total Amount : " + total.toFixed(2);
+            }
+        </script>
+    </head>
+    <body align="center">
+        <h1>GST Calculator</h1>
+        Enter Amount : 
+        <input type = "text" id = "amt">
+        <br><br> Slect GST Rate :
+        <input type="radio" id="gst" value="5"> 5%
+        <input type="radio" id="gst" value="12"> 12%
+        <input type="radio" id="gst" value="18"> 18%
+        <input type="radio" id="gst" value="28"> 28%
+        <br><br>
+        <input type="button" value="Calculate GST" onclick="calculateGST()">
+        <br><br>
+    </body>
+</html>
+   

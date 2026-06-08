@@ -1,0 +1,41 @@
+Arithmetic Operations(Using choice) :
+
+
+
+<html>
+        <script>
+            function doCalculate(){
+                var a = myfrm.txt1.value
+                var b = myfrm.txt2.value
+                var choice = myfrm.txt3.value
+                if(choice == "+"){
+                    var c = parseInt(a) + parseInt(b)
+                    myfrm.ans.value = "Sum is "+ c
+                 } else if(choice == "-"){
+                    var c = parseInt(a) - parseInt(b)
+                    myfrm.ans.value = "Sub is "+ c
+                 } else if(choice == "*"){
+                    var c = parseInt(a) * parseInt(b)
+                    myfrm.ans.value = "Mult is "+ c
+                 } else if(choice == "/"){
+                    var c = parseInt(a) / parseInt(b)
+                    myfrm.ans.value = "Div is "+ c
+                 }
+            }
+        </script>
+        
+        <body>
+            <form id = "myfrm">
+                No1 : <input type ="text" name="txt1" /> <br />
+                No2 : <input type ="text" name="txt2" /> <br />
+                Choice :<select name="txt3">
+                    <option>+</option>
+                    <option>-</option>
+                    <option>*</option>
+                    <option>/</option>
+                </select><br />
+                <Input type="button" onclick="doCalculate()" value="Get Answer" /><br />
+                <Input type="text" name="ans" readonly disabled/>
+            </form>
+        </body>
+    </html>

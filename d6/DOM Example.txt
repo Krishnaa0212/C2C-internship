@@ -1,0 +1,22 @@
+DOM Example :
+
+
+<html>
+    <script>
+        function doSum() {
+            var a = parseInt(document.getElementById("txt1").value)
+            var myans = document.getElementById("ans")
+
+            if(a % 2 == 0) {
+                myans.innerText = "No is Even"
+            } else {
+                myans.innerText = "No is Odd"
+            }
+        }
+    </script>
+    <body>
+        No:<input type="text" id="txt1" />
+        <input type="button" onclick="doSum()" />
+        <p id="ans"></p>></p>
+    </body>
+</html>
