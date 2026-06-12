@@ -1,4 +1,4 @@
-Basic concepts :
+v0pBasic concepts :
 
 1. What is Variable
      A variable is a memory location used to store data that can change during program execution. 
